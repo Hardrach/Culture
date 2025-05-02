@@ -1,0 +1,145 @@
+/* Titres principaux */
+.title-main {
+  font-family: 'Arial', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.title-section {
+  font-family: 'Arial', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.title-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--primary-color);
+}
+
+.title-card {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+/* Sous-titres */
+.subtitle {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* Texte du corps */
+.text-body {
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Styles spéciaux pour les citations */
+.quote {
+  font-family: 'Arial', serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  font-style: italic;
+  color: var(--primary-color);
+  text-align: center;
+  padding: var(--spacing-lg);
+  position: relative;
+}
+
+.quote::before,
+.quote::after {
+  content: '"';
+  font-size: 3em;
+  color: var(--primary-color);
+  opacity: 0.3;
+  position: absolute;
+}
+
+.quote::before {
+  top: 0;
+  left: 0;
+}
+
+.quote::after {
+  bottom: -0.5em;
+  right: 0;
+}
+
+/* Styles pour les liens */
+.link-decorated {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link-decorated:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+/* Styles responsifs */
+@media screen and (max-width: 768px) {
+  .title-main {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .title-section {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .title-section::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .title-card {
+    font-size: 1.25rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .text-body {
+    font-size: 0.95rem;
+  }
+}
+
+/* Animations de texte */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-text {
+  animation: fadeInUp 0.6s ease-out forwards;
+} 

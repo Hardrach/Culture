@@ -1,0 +1,300 @@
+@import './variables.css';
+
+.cuisine-container {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(145deg, #111, #222);
+  color: #f5f5f5;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cuisine-container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(255, 107, 107, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(78, 205, 196, 0.1) 0%, transparent 50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.header-section {
+  text-align: center;
+  padding: 2rem 0;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.cuisine-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.cuisine-header h1 {
+  font-size: 2.5em;
+  color: #ffcc00;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-family: Arial, sans-serif;
+}
+
+.cuisine-header p {
+  color: #f5f5f5;
+  opacity: 0.8;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2em;
+  font-family: Arial, sans-serif;
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+  width: calc(100% - 4rem);
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cuisine-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Couleurs différentes pour les bordures des cartes */
+.cuisine-card:nth-child(3n+1) {
+  border-color: rgba(255, 107, 107, 0.3);
+}
+
+.cuisine-card:nth-child(3n+2) {
+  border-color: rgba(78, 205, 196, 0.3);
+}
+
+.cuisine-card:nth-child(3n+3) {
+  border-color: rgba(69, 183, 209, 0.3);
+}
+
+.cuisine-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.cuisine-card:hover::before {
+  transform: translateX(100%);
+}
+
+.cuisine-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cuisine-card:nth-child(3n+1):hover {
+  border-color: rgba(255, 107, 107, 0.5);
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.2);
+}
+
+.cuisine-card:nth-child(3n+2):hover {
+  border-color: rgba(78, 205, 196, 0.5);
+  box-shadow: 0 5px 15px rgba(78, 205, 196, 0.2);
+}
+
+.cuisine-card:nth-child(3n+3):hover {
+  border-color: rgba(69, 183, 209, 0.5);
+  box-shadow: 0 5px 15px rgba(69, 183, 209, 0.2);
+}
+
+.item-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+/* Couleurs différentes pour les icônes */
+.cuisine-card:nth-child(3n+1) .item-icon {
+  color: #ff6b6b;
+}
+
+.cuisine-card:nth-child(3n+2) .item-icon {
+  color: #4ecdc4;
+}
+
+.cuisine-card:nth-child(3n+3) .item-icon {
+  color: #45b7d1;
+}
+
+.cuisine-card:hover .item-icon {
+  transform: scale(1.2);
+}
+
+.cuisine-card h3 {
+  color: #ffcc00;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-family: Arial, sans-serif;
+}
+
+.cuisine-card p {
+  color: #f5f5f5;
+  opacity: 0.8;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+  font-family: Arial, sans-serif;
+}
+
+/* Boutons avec couleurs différentes */
+.btn-voir-plus {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.cuisine-card:nth-child(3n+2) .btn-voir-plus {
+  background-color: #4ecdc4;
+}
+
+.cuisine-card:nth-child(3n+3) .btn-voir-plus {
+  background-color: #45b7d1;
+}
+
+.btn-voir-plus:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background: rgba(26, 26, 26, 0.95);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.modal-content:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.close-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin: 1rem 0;
+  transition: transform 0.3s ease;
+}
+
+.modal-content:hover img {
+  transform: scale(1.02);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .items-grid {
+    gap: 1rem;
+    padding: 0 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .cuisine-card {
+    padding: 1.5rem;
+  }
+
+  .modal-content {
+    padding: 1.5rem;
+    max-width: 95%;
+  }
+}
+
+.cuisine-title {
+  font-family: Arial, sans-serif;
+}
+
+.cuisine-description {
+  font-family: Arial, sans-serif;
+}
+
+.recipe-title {
+  font-family: Arial, sans-serif;
+}

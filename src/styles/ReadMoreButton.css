@@ -1,0 +1,52 @@
+.read-more-button {
+  background: var(--primary-color, #ffd700);
+  color: var(--text-on-primary, #000);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.read-more-button:hover {
+  background: var(--primary-color-dark, #e6c200);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.read-more-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.read-more-button.link {
+  background: transparent;
+  color: var(--primary-color, #ffd700);
+  padding: 0.5rem 0;
+  box-shadow: none;
+  border-bottom: 2px solid transparent;
+}
+
+.read-more-button.link:hover {
+  background: transparent;
+  color: var(--primary-color-dark, #e6c200);
+  border-bottom-color: currentColor;
+  box-shadow: none;
+  transform: none;
+}
+
+.read-more-button svg {
+  font-size: 0.9em;
+  transition: transform 0.3s ease;
+}
+
+.read-more-button:hover svg {
+  transform: translateX(4px);
+} 
