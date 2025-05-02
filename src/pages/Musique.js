@@ -44,6 +44,27 @@ const Musique = () => {
   const [wikiInfo, setWikiInfo] = useState("");
   const [wikiImage, setWikiImage] = useState("");
   const [loading, setLoading] = useState(false);
+  const [cardImages, setCardImages] = useState({});
+
+  useEffect(() => {
+    const fetchAllImages = async () => {
+      const images = {};
+      for (const video of videos) {
+        try {
+          const encodedTitle = encodeURIComponent(video.wikiTitle);
+          const response = await fetch(
+            `https://fr.wikipedia.org/api/rest_v1/page/summary/${encodedTitle}`
+          );
+          const data = await response.json();
+          images[video.title] = data.thumbnail?.source || "";
+        } catch {
+          images[video.title] = "";
+        }
+      }
+      setCardImages(images);
+    };
+    fetchAllImages();
+  }, []);
 
   useEffect(() => {
     const fetchWikiInfo = async () => {
@@ -54,13 +75,10 @@ const Musique = () => {
           const response = await fetch(
             `https://fr.wikipedia.org/api/rest_v1/page/summary/${encodedTitle}`
           );
-          
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
           }
-          
           const data = await response.json();
-          
           if (data.type === "disambiguation") {
             setWikiInfo("Plusieurs articles correspondent à ce sujet. Veuillez préciser la recherche.");
             setWikiImage("");
@@ -86,7 +104,6 @@ const Musique = () => {
         setLoading(false);
       }
     };
-
     fetchWikiInfo();
   }, [selectedVideo]);
 
@@ -124,6 +141,13 @@ const Musique = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
+              style={{
+                backgroundImage: cardImages[video.title]
+                  ? `url(${cardImages[video.title]})`
+                  : undefined,
+                backgroundSize: "cover",
+                backgroundPosition: "center"
+              }}
             >
               <div className="video-icon">
                 {video.icon}

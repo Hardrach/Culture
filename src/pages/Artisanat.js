@@ -57,6 +57,28 @@ const Artisanat = () => {
   const [wikiInfo, setWikiInfo] = useState("");
   const [wikiImage, setWikiImage] = useState("");
   const [loading, setLoading] = useState(false);
+  const [cardImages, setCardImages] = useState({});
+
+  // Charger les images Wikipedia pour chaque item au montage
+  useEffect(() => {
+    const fetchAllImages = async () => {
+      const images = {};
+      for (const item of artisanatItems) {
+        try {
+          const encodedTitle = encodeURIComponent(item.wikiTitle);
+          const response = await fetch(
+            `https://fr.wikipedia.org/api/rest_v1/page/summary/${encodedTitle}`
+          );
+          const data = await response.json();
+          images[item.title] = data.thumbnail?.source || "";
+        } catch {
+          images[item.title] = "";
+        }
+      }
+      setCardImages(images);
+    };
+    fetchAllImages();
+  }, []);
 
   useEffect(() => {
     const fetchWikiInfo = async () => {
@@ -67,13 +89,10 @@ const Artisanat = () => {
           const response = await fetch(
             `https://fr.wikipedia.org/api/rest_v1/page/summary/${encodedTitle}`
           );
-          
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
           }
-          
           const data = await response.json();
-          
           if (data.type === "disambiguation") {
             setWikiInfo("Plusieurs articles correspondent à ce sujet. Veuillez préciser la recherche.");
             setWikiImage("");
@@ -89,7 +108,6 @@ const Artisanat = () => {
         setLoading(false);
       }
     };
-
     fetchWikiInfo();
   }, [selectedItem]);
 
@@ -119,6 +137,13 @@ const Artisanat = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
+              style={{
+                backgroundImage: cardImages[item.title]
+                  ? `url(${cardImages[item.title]})`
+                  : undefined,
+                backgroundSize: "cover",
+                backgroundPosition: "center"
+              }}
             >
               <div className="item-icon">
                 {item.icon}

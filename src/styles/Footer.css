@@ -13,6 +13,18 @@
   margin-top: auto;
 }
 
+.Myname {
+  color: #ffd700;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+ 
+}
+.Realise {
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+}
+
 .footer::before {
   content: '';
   position: absolute;
@@ -25,7 +37,7 @@
 }
 
 .footer a {
-  color: #ffd700;
+  color: white;
   text-decoration: none;
   margin: 0 12px;
   transition: color 0.3s ease;
