@@ -36,6 +36,46 @@ const videos = [
     url: "https://www.youtube.com/embed/L5KzDs1CGLI",
     icon: <FaMusic />,
     color: "#96ceb4"
+  },
+  {
+    title: "Amazigh",
+    description: "Musique traditionnelle berbère du Maroc",
+    wikiTitle: "Musique berbère",
+    url: "https://www.youtube.com/embed/0QwQKpQwKpQ",
+    icon: <FaMusic />,
+    color: "#FFD700"
+  },
+  {
+    title: "Andalouse marocaine",
+    description: "Musique savante héritée d'Al-Andalus",
+    wikiTitle: "Musique andalouse marocaine",
+    url: "https://www.youtube.com/embed/6QwQKpQwKpQ",
+    icon: <FaMusic />,
+    color: "#ff6b6b"
+  },
+  {
+    title: "Reggada",
+    description: "Musique et danse guerrière de l'Oriental marocain",
+    wikiTitle: "Reggada",
+    url: "https://www.youtube.com/embed/1QwQKpQwKpQ",
+    icon: <FaMusic />,
+    color: "#4ecdc4"
+  },
+  {
+    title: "Ahouach",
+    description: "Danse et musique collective du Haut Atlas",
+    wikiTitle: "Ahouach",
+    url: "https://www.youtube.com/embed/2QwQKpQwKpQ",
+    icon: <FaMusic />,
+    color: "#45b7d1"
+  },
+  {
+    title: "Chaabi marocain",
+    description: "Musique populaire urbaine marocaine",
+    wikiTitle: "Chaabi marocain",
+    url: "https://www.youtube.com/embed/3QwQKpQwKpQ",
+    icon: <FaMusic />,
+    color: "#96ceb4"
   }
 ];
 
