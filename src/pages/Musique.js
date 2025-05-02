@@ -9,7 +9,7 @@ const videos = [
     title: "Gnaoua",
     description: "Musique spirituelle du sud marocain",
     wikiTitle: "Gnaoua",
-    url: "https://www.youtube.com/embed/BSKmB_1-Kto",
+    url: "https://www.youtube.com/embed/3LDxDDUKOwc",
     icon: <FaMusic />,
     color: "#ff6b6b"
   },
@@ -60,7 +60,31 @@ const videos = [
     title: "Aïssawa",
     description: "Est une confrérie et un ordre mystico-religieux soufi marocain",
     wikiTitle: "Aïssawa",
-    url: "https://www.youtube.com/embed/f9pYVm1Jl5U?start=11",
+    url: "https://www.youtube.com/embed/tHdvC891Eb8 ",
+    icon: <FaMusic />,
+    color: "#FFD700"
+  },
+  {
+    title: "Tagounite-Zagoora",
+    description: "Group Ahidous from the villages of Tagounite and M'hamid el Ghizlane",
+    wikiTitle: "",
+    url: "https://www.youtube.com/embed/tHdvC891Eb8 ",
+    icon: <FaMusic />,
+    color: "#FFD700"
+  },  
+  {
+    title: "Musique Hassaniya  (Mhamid elghezlan)",
+    description: "Music Hassani traditionnelle au coeur du Sahara Mhamid. ",
+    wikiTitle: "",
+    url: "https://www.youtube.com/embed/7-ALZ4M67cE",
+    icon: <FaMusic />,
+    color: "#FFD700"
+  },
+  {
+    title: "Ahouach Talouat ",
+    description: "Est une confrérie et un ordre mystico-religieux soufi marocain",
+    wikiTitle: "Ahouach",
+    url: "https://www.youtube.com/embed/WULjd15xdGQ",
     icon: <FaMusic />,
     color: "#FFD700"
   }
