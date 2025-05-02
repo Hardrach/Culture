@@ -112,17 +112,19 @@
   text-align: center;
 }
 
-.city-select-container.focused {
-  border-color: var(--accent-color);
-  box-shadow: 0 0 16px rgba(250, 204, 21, 0.5);
+
+
+.select-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .select-icon {
-  position: absolute;
-  left: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
+  position: static;
   color: red;
+  font-size: 1.5rem;
 }
 
 .city-select {
