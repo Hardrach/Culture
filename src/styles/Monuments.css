@@ -332,6 +332,14 @@ body.dark-mode .card {
   }
 }
 
+@media (min-width: 601px) and (max-width: 1024px) {
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
 /* Animations */
 @keyframes cardHover {
   0% {

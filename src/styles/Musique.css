@@ -316,6 +316,13 @@
   }
 }
 
+@media (min-width: 601px) and (max-width: 1024px) {
+  .videos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
 /* Dark mode adjustments */
 body.dark-mode .musique-container {
   background: linear-gradient(145deg, #000, #111);

@@ -289,6 +289,20 @@
   }
 }
 
+@media (max-width: 600px) {
+  .artisanat-card {
+    min-height: 160px;
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .items-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
 .artisanat-title {
   font-family: Arial, sans-serif;
 }
