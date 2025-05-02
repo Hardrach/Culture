@@ -82,7 +82,7 @@ const videos = [
   },
   {
     title: "Ahouach Talouat ",
-    description: "Est une confrérie et un ordre mystico-religieux soufi marocain",
+    description: "Danse et musique collective du Haut Atlas",
     wikiTitle: "Ahouach",
     url: "https://www.youtube.com/embed/WULjd15xdGQ",
     icon: <FaMusic />,
