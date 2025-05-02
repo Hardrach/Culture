@@ -18,11 +18,13 @@
   font-size: 18px;
   font-family: Arial, sans-serif;
   font-weight: bold;
- 
+  margin-bottom: 10px;
 }
+
 .Realise {
   font-size: 15px;
   font-family: Arial, sans-serif;
+  margin-bottom: 10px;
 }
 
 .footer::before {
@@ -52,4 +54,19 @@
   font-family: Arial, sans-serif;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.social-links {
+  margin-top: 15px;
+}
+
+.social-icon {
+  font-size: 24px;
+  margin: 0 10px;
+  color: #ddc2c2;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #007bff;
 }

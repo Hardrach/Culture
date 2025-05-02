@@ -155,9 +155,15 @@
 
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  padding: 1rem;
+  position: relative;
+  z-index: 1;
+  width: calc(100% - 4rem);
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: stretch;
 }
 
 .select-city-prompt {
@@ -198,14 +204,21 @@
 }
 
 .card {
-  background: var(--bg-secondary);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
-  overflow: hidden;
+  padding: 2rem;
+  cursor: pointer;
   transition: all 0.3s ease;
-  border: 2px solid var(--border-color);
-  height: 90%;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
 }
 
 .card:hover {
@@ -321,14 +334,13 @@ body.dark-mode .card {
 
 /* Responsive design */
 @media (max-width: 768px) {
-  .monuments-grid {
-    gap: 1rem;
-    padding: 0 1rem;
+  .cards-container {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
-
-  .city-select-container {
-    width: 90%;
+  .card {
+    min-height: 160px;
+    padding: 1rem;
   }
 }
 
@@ -507,3 +519,4 @@ body.dark-mode .card a {
 .monument-description {
   font-family: Arial, sans-serif;
 }
+

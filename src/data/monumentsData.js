@@ -13,12 +13,9 @@ const monumentsData = {
     ],
     Meknès: [
       "Site archéologique de Volubilis",
-      "Bab Mansour el-Aleuj",
       "Hri Souani",
-      "Bab Moulay Ismail",
       "Prison de Kara",
       "place Lahdim",
-      "Bou Inania Médersa (Meknes)",
       
     ],
     Fes: [
@@ -45,9 +42,6 @@ const monumentsData = {
       "Légation américaine de Tanger",
       "Cap Spartel",
       "Grottes d'Hercule (Tanger)",
-      "Musée Forbes",
-      "Place du Grand Socco",
-      "Musée de la Fondation Lorin"
     ],
     Essaouira: [
       "Sqala de la Kasbah",
