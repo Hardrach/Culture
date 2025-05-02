@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       
-      <p className="Realise">  Réalisé avec ❤️ par <span className="Myname">Yassine Rachid</span></p>
+      <p className="Realise">  Réalisé avec ❤️ par <span className="Myname">YASSINE RACHID</span></p>
       <p>© 2025 Patrimoine Marocain </p>
 
       <p>
