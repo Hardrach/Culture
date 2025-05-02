@@ -12,6 +12,7 @@ const MonumentAuto = ({ title }) => {
         const encodedTitle = encodeURIComponent(title);
         const response = await fetch(
           `https://fr.wikipedia.org/api/rest_v1/page/summary/${encodedTitle}`
+
         );
 
         if (!response.ok) {

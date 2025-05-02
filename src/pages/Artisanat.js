@@ -121,8 +121,12 @@ const Artisanat = () => {
           transition={{ duration: 0.5 }}
         >
           <h1>
-            <FaPalette className="header-icon" />
-            Artisanat Traditionnel Marocain
+            <div className="header-icon-container">
+              <FaPalette className="header-icon" />
+            </div>
+            <div className="header-text">
+              Artisanat Traditionnel Marocain
+            </div>
           </h1>
           <p className="subtitle">
             Découvrez la richesse de l'artisanat marocain à travers ses différents métiers traditionnels

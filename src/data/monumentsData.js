@@ -2,41 +2,42 @@
 const monumentsData = {
     Marrakech: [
       "Jemaa el-Fna",
+      "Ménara (jardin)",
       "Mosquée Koutoubia",
       "Palais de la Bahia",
       "Jardin Majorelle",
       "Palais El Badi",
       "Tombeaux Saadiens",
       "Medersa Ben Youssef",
-      "Menara Gardens"
+      
     ],
     Meknès: [
       "Site archéologique de Volubilis",
-      "Bab Mansour",
-      "Heri es-Souani",
-      "Mausolée Moulay Ismail",
+      "Bab Mansour el-Aleuj",
+      "Hri Souani",
+      "Bab Moulay Ismail",
       "Prison de Kara",
-      "Place El Hedim",
-      "Medersa Bou Inania de Meknès",
-      "Fondouk Nejjarine"
+      "place Lahdim",
+      "Bou Inania Médersa (Meknes)",
+      
     ],
     Fes: [
       "Université Al Quaraouiyine",
       "Bab Boujloud",
       "Médersa Bou Inania de Fès",
       "Fondouk Nejjarine",
-      "Mausolée Moulay Idriss II",
-      "Tanneries Chouara",
+      "Médersa Attarine",
+      "Médersa Seffarine",
       "Mosquée des Andalous",
-      "Palais Royal de Fès"
+     
     ],
     Rabat: [
       "Tour Hassan",
       "Mausolée Mohammed V",
       "Chellah",
       "Kasbah des Oudayas",
-      "Palais Royal de Rabat",
-      "Musée Mohammed VI d'Art Moderne et Contemporain",
+      "Mausolée Mohammed-V",
+      "Bouregreg",
       "Cathédrale Saint-Pierre de Rabat"
     ],
     Tanger: [
@@ -54,69 +55,35 @@ const monumentsData = {
       "Bab el-Marsa",
       "Musée Sidi-Mohammed-ben-Abdellah",
       "Port d'Essaouira",
-      "Mellah d'Essaouira",
-      "Bordj El Berod"
+      "Bab Doukkala (Essaouira)",
+      "Bab el-Menzeh",
+      "Bab el-Sebâa"
     ],
     Agadir: [
-      "Agadir Oufella",
-      "La Médina d'Agadir",
-      "Musée du Patrimoine Amazigh",
-      "Vallée des Oiseaux",
-      "Souk El Had",
-      "Jardin de Olhao"
+      "Agadir Oufella"
+     
     ],
     Casablanca: [
       "Mosquée Hassan-II",
       "Boulevard Mohammed-V (Casablanca)",
-      "Place des Nations Unies",
-      "Ancienne Médina de Casablanca",
-      "Cathédrale du Sacré-Cœur",
       "Parc de la Ligue Arabe",
       "Phare d'El Hank"
     ],
     Chefchaouen: [
-      "Kasbah de Chefchaouen",
-      "Place Outa el Hammam",
-      "Mosquée espagnole",
-      "Ras El Maa"
+      "Kasbah de Chefchaouen"
     ],
     Ouarzazate: [
       "Ait Benhaddou",
-      "Kasbah de Taourirt",
-      "Atlas Studios",
-      "Fint Oasis"
+      "Ksar Taourirt",
+     
     ],
-    Tafilalet: [
-      "Ksar d'El Khorbat",
-      "Ksar Maadid",
-      "Palmeraie de Tafilalet"
-    ],
+
     ElJadida: [
-      "Cité portugaise d'El Jadida",
+      "Mazagan",
       "Bastion de l'Ange",
-      "Église de l'Assomption",
-      "Phare d'El Jadida"
+      "Église Notre-Dame-de-l'Assomption d'El Jadida",
+      
     ],
-    Tetouan: [
-      "Médina de Tétouan",
-      "Musée Archéologique de Tétouan",
-      "Place Moulay El Mehdi"
-    ],
-    Asilah: [
-      "Médina d'Asilah",
-      "Remparts portugais",
-      "Palais Raissouni"
-    ],
-    Taroudant: [
-      "Remparts de Taroudant",
-      "Place Assarag",
-      "Palais Salam"
-    ],
-    Larache: [
-      "Site archéologique de Lixus",
-      "Kasbah de Larache",
-      "Phare de Larache"
-    ]
   };
   
   export default monumentsData;

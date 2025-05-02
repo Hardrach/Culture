@@ -134,8 +134,12 @@ const Cuisine = () => {
           transition={{ duration: 0.5 }}
         >
           <h1>
-            <FaUtensils className="header-icon" />
-            Cuisine Marocaine Traditionnelle
+            <div className="header-icon-container">
+              <FaUtensils className="header-icon" />
+            </div>
+            <div className="header-text">
+              Cuisine Marocaine Traditionnelle
+            </div>
           </h1>
           <p className="subtitle">
             Découvrez la richesse culinaire du Maroc à travers ses plats traditionnels

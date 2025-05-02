@@ -13,14 +13,7 @@ const videos = [
     icon: <FaMusic />,
     color: "#ff6b6b"
   },
-  {
-    title: "Malhoun",
-    description: "Poésie andalouse chantée dans les villes impériales",
-    wikiTitle: "Malhoun",
-    url: "https://www.youtube.com/embed/m1yaRweMfTU",
-    icon: <FaMusic />,
-    color: "#4ecdc4"
-  },
+
   {
     title: "Ahidous",
     description: "Chants amazighs collectifs avec tambours",
@@ -30,52 +23,46 @@ const videos = [
     color: "#45b7d1"
   },
   {
-    title: "Aïta",
-    description: "Chants populaires par les cheikhates",
-    wikiTitle: "Aïta",
-    url: "https://www.youtube.com/embed/L5KzDs1CGLI",
+    title: "Nass El Ghiwane",
+    description: "Est un groupe musical marocain, né dans les années 1970 à Casablanca",
+    wikiTitle: "Nass El Ghiwane",
+    url: "https://www.youtube.com/embed/evCDDXIWjrU",
     icon: <FaMusic />,
     color: "#96ceb4"
   },
+
   {
-    title: "Amazigh",
-    description: "Musique traditionnelle berbère du Maroc",
-    wikiTitle: "Musique berbère",
-    url: "https://www.youtube.com/embed/0QwQKpQwKpQ",
-    icon: <FaMusic />,
-    color: "#FFD700"
-  },
-  {
-    title: "Andalouse marocaine",
-    description: "Musique savante héritée d'Al-Andalus",
-    wikiTitle: "Musique andalouse marocaine",
-    url: "https://www.youtube.com/embed/6QwQKpQwKpQ",
+    title: "Dakka marrakchia",
+    description: "Est une forme musicale rituelle et folklorique marocaine, typique de la ville de Marrakech",
+    wikiTitle: "Dakka marrakchia",
+    url: "https://www.youtube.com/embed/G6GXivE1QN0",
     icon: <FaMusic />,
     color: "#ff6b6b"
   },
-  {
-    title: "Reggada",
-    description: "Musique et danse guerrière de l'Oriental marocain",
-    wikiTitle: "Reggada",
-    url: "https://www.youtube.com/embed/1QwQKpQwKpQ",
-    icon: <FaMusic />,
-    color: "#4ecdc4"
-  },
+
   {
     title: "Ahouach",
     description: "Danse et musique collective du Haut Atlas",
     wikiTitle: "Ahouach",
-    url: "https://www.youtube.com/embed/2QwQKpQwKpQ",
+    url: "https://www.youtube.com/embed/88ZygWPtfbA",
     icon: <FaMusic />,
     color: "#45b7d1"
   },
   {
-    title: "Chaabi marocain",
+    title: "Chaabi ",
     description: "Musique populaire urbaine marocaine",
-    wikiTitle: "Chaabi marocain",
-    url: "https://www.youtube.com/embed/3QwQKpQwKpQ",
+    wikiTitle: "Chaâbi marocain ",
+    url: "https://www.youtube.com/embed/O2Au75xK4ig",
     icon: <FaMusic />,
     color: "#96ceb4"
+  },
+  {
+    title: "Aïssawa",
+    description: "Est une confrérie et un ordre mystico-religieux soufi marocain",
+    wikiTitle: "Aïssawa",
+    url: "https://www.youtube.com/embed/f9pYVm1Jl5U?start=11",
+    icon: <FaMusic />,
+    color: "#FFD700"
   }
 ];
 
@@ -157,8 +144,12 @@ const Musique = () => {
           transition={{ duration: 0.5 }}
         >
           <h1>
-            <FaMusic className="header-icon" />
-            Musique Traditionnelle Marocaine
+            <div className="header-icon-container">
+              <FaMusic className="header-icon" />
+            </div>
+            <div className="header-text">
+              Musique Traditionnelle Marocaine
+            </div>
           </h1>
           <p className="subtitle">
             Découvrez la richesse musicale du Maroc à travers ses différents styles traditionnels
