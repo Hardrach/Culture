@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <Link to="/" className="navbar-logo" onClick={closeMenu}>
-        <img src="../image/morocco-flag.png" alt="Logo Maroc" />
+        <img src="../image/logomonument.jpg" alt="Logo Maroc" />
         <h1>Patrimoine Marocain</h1>
       </Link>
 
