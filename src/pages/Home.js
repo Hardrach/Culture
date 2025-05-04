@@ -64,8 +64,8 @@ export default function Home() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.9 + index * 0.1 }}
+                animate={{ opacity: 0.8, y: 0 }}
+                transition={{ delay: 0.9 + index * 0.9 }}
               >
                 <div className="category-icon">{category.icon}</div>
                 <h3>{category.title}</h3>

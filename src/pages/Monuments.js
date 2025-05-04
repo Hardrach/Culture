@@ -69,9 +69,13 @@ const Monuments = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              <FaMapMarkedAlt className="select-container" size={48} />
-              <h3>Sélectionnez une ville pour découvrir ses monuments</h3>
-              <p>Chaque ville recèle des trésors architecturaux uniques</p>
+              <div className="centered-container">
+                <div className="select-city-prompt-card">
+                  <FaMapMarkedAlt size={48} />
+                  <h3>Sélectionnez une ville pour découvrir ses monuments</h3>
+                  <p>Chaque ville recèle des trésors architecturaux uniques</p>
+                </div>
+              </div>
             </motion.div>
           ) : (
             monumentsData[selectedCity].map((title, index) => (

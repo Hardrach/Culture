@@ -345,6 +345,7 @@ body.dark-mode .card {
     min-height: 160px;
     padding: 1rem;
   }
+  
 
 
 }
@@ -356,6 +357,8 @@ body.dark-mode .card {
     gap: 1.5rem;
     
   }
+ 
+
   
 }
 
@@ -581,5 +584,12 @@ body.dark-mode .card a {
   .cards-container {
     max-width: 1400px;
   }
+}
+
+.centered-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
