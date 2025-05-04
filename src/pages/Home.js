@@ -35,7 +35,7 @@ export default function Home() {
               damping: 20
             }}
           >
-            <img src="../image/MarocMap-removebg-preview.png" alt="Logo Maroc" />
+            <img src="../image/logomonument.jpg" alt="Logo Maroc" />
           </motion.div>
         </div>
 

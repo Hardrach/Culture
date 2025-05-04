@@ -20,13 +20,27 @@
   text-decoration: none;
   
 }
+.navbar-logo::before {
+  content: '';
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 100%
+  );
+  transform: rotate(45deg);
+  animation: shine 6s infinite;
+}
 
 .navbar-logo img {
   width: 55px;
   height: 55px;
-  border-radius: 100%;
 
 }
+
 
 .navbar-logo h1 {
   font-family: Arial, sans-serif;
