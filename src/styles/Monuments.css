@@ -25,6 +25,8 @@
   background: var(--overlay-gradient);
   z-index: 0;
   pointer-events: none;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .header-section {
@@ -208,7 +210,7 @@
   border-radius: 15px;
   padding: 2rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   backdrop-filter: blur(10px);
   border: 2px solid rgba(255, 255, 255, 0.1);
   display: flex;
@@ -219,6 +221,7 @@
   position: relative;
   overflow: hidden;
   height: 100%;
+  will-change: transform;
 }
 
 .card:hover {
@@ -342,6 +345,8 @@ body.dark-mode .card {
     min-height: 160px;
     padding: 1rem;
   }
+
+
 }
 
 @media (min-width: 601px) and (max-width: 1024px) {
@@ -349,7 +354,9 @@ body.dark-mode .card {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+    
   }
+  
 }
 
 /* Animations */
@@ -518,5 +525,61 @@ body.dark-mode .card a {
 
 .monument-description {
   font-family: Arial, sans-serif;
+}
+
+/* Optimisations pour les très petits écrans */
+@media (max-width: 480px) {
+  .header-section h1 {
+    font-size: 1.8em;
+  }
+
+  .subtitle {
+    font-size: 1em;
+    padding: 0 1rem;
+  }
+
+  .city-select {
+    font-size: 1rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .select-city-prompt {
+    padding: 2rem 1rem;
+  }
+
+  .select-city-prompt h3 {
+    font-size: 1.2rem;
+  }
+
+  .select-city-prompt p {
+    font-size: 0.9rem;
+  }
+
+  .cards-container {
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+}
+
+/* Optimisations pour les tablettes */
+@media (min-width: 481px) and (max-width: 768px) {
+  .header-section h1 {
+    font-size: 2.2em;
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+/* Optimisations pour les grands écrans */
+@media (min-width: 1440px) {
+  .monuments-container {
+    padding: 0 4rem;
+  }
+
+  .cards-container {
+    max-width: 1400px;
+  }
 }
 

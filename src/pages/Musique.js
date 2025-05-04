@@ -18,7 +18,7 @@ const videos = [
     title: "Ahidous",
     description: "Chants amazighs collectifs avec tambours",
     wikiTitle: "Ahidous",
-    url: "https://www.youtube.com/embed/QvUXFfJ5JXE",
+    url: "https://www.youtube.com/embed/lPv7Tl0314s",
     icon: <FaMusic />,
     color: "#45b7d1"
   },
@@ -28,7 +28,8 @@ const videos = [
     wikiTitle: "Nass El Ghiwane",
     url: "https://www.youtube.com/embed/evCDDXIWjrU",
     icon: <FaMusic />,
-    color: "#96ceb4"
+    color: "#96ceb4",
+    customImage: "../image/nasselghiwane.jpg"
   },
 
   {
@@ -60,7 +61,7 @@ const videos = [
     title: "Aïssawa",
     description: "Est une confrérie et un ordre mystico-religieux soufi marocain",
     wikiTitle: "Aïssawa",
-    url: "https://www.youtube.com/embed/tHdvC891Eb8 ",
+    url: "https://www.youtube.com/embed/f9pYVm1Jl5U ",
     icon: <FaMusic />,
     color: "#FFD700"
   },
@@ -70,7 +71,8 @@ const videos = [
     wikiTitle: "",
     url: "https://www.youtube.com/embed/tHdvC891Eb8 ",
     icon: <FaMusic />,
-    color: "#FFD700"
+    color: "#FFD700",
+    customImage: "../image/tagounite.jpg"
   },  
   {
     title: "Musique Hassaniya  (Mhamid elghezlan)",
@@ -78,7 +80,8 @@ const videos = [
     wikiTitle: "",
     url: "https://www.youtube.com/embed/7-ALZ4M67cE",
     icon: <FaMusic />,
-    color: "#FFD700"
+    color: "#FFD700",
+    customImage: "../image/hassaniya.jpg"
   },
   {
     title: "Ahouach Talouat ",
@@ -197,9 +200,11 @@ const Musique = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               style={{
-                backgroundImage: cardImages[video.title]
-                  ? `url(${cardImages[video.title]})`
-                  : undefined,
+                backgroundImage: video.customImage
+                  ? `url(${video.customImage})`
+                  : cardImages[video.title]
+                    ? `url(${cardImages[video.title]})`
+                    : undefined,
                 backgroundSize: "cover",
                 backgroundPosition: "center"
               }}

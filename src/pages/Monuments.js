@@ -55,7 +55,7 @@ const Monuments = () => {
             ))}
           </select>
         </motion.div>
-
+         
         <motion.div
           className="cards-container"
           initial={{ opacity: 0 }}
@@ -69,7 +69,7 @@ const Monuments = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              <FaMapMarkedAlt size={48} />
+              <FaMapMarkedAlt className="select-container" size={48} />
               <h3>Sélectionnez une ville pour découvrir ses monuments</h3>
               <p>Chaque ville recèle des trésors architecturaux uniques</p>
             </motion.div>
@@ -86,6 +86,8 @@ const Monuments = () => {
             ))
           )}
         </motion.div>
+        
+        
       </div>
       <Footer />
     </>

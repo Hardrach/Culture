@@ -8,11 +8,19 @@ import "../styles/Cuisine.css";
 
 const cuisineItems = [
   {
-    title: "Rfissa",
-    description: "La rfissa marocaine fait partie des traditions culinaires de ce pays",
-    wikiTitle: "Rfissa",
-    icon: <FaUtensils />,
-    color: "#ff6b6b"
+    title: "Tajine",
+    description: "Est un plat traditionnel marocain",
+    wikiTitle: "Tajine",
+    icon: <FaLeaf />,
+    color: "#ff6b6b",
+    customImage: "../image/tajine.jpg"
+  },
+  {
+    title: "Djaj mhamer bdeghmira",
+    description: "Est un plat traditionnel marocain",
+    wikiTitle: "Djaj mhamer bdeghmira",
+    icon: <FaGlassWhiskey />,
+    color: "#4ecdc4"
   },
   {
     title: "Couscous",
@@ -22,11 +30,11 @@ const cuisineItems = [
     color: "#4ecdc4"
   },
   {
-    title: "Seffa",
-    description: "Ce plat se mange généralement en fin de repas avant le dessert",
-    wikiTitle: "Seffa",
-    icon: <FaBreadSlice />,
-    color: "#4ecdc4"
+    title: "Rfissa",
+    description: "La rfissa marocaine fait partie des traditions culinaires de ce pays",
+    wikiTitle: "Rfissa",
+    icon: <FaUtensils />,
+    color: "#ff6b6b"
   },
   {
     title: "Pastilla",
@@ -35,6 +43,15 @@ const cuisineItems = [
     icon: <FaLeaf />,
     color: "#45b7d1"
   },
+
+  {
+    title: "Seffa",
+    description: "Ce plat se mange généralement en fin de repas avant le dessert",
+    wikiTitle: "Seffa",
+    icon: <FaBreadSlice />,
+    color: "#4ecdc4"
+  },
+
   {
     title: "Harira",
     description: "Soupe traditionnelle aux lentilles et tomates",
@@ -62,7 +79,31 @@ const cuisineItems = [
     wikiTitle: "Chebakia",
     icon: <FaGlassWhiskey />,
     color: "#4ecdc4"
-  }
+  },
+  {
+    title: "Msemmen",
+    description: "Est un plat traditionnel marocain",
+    wikiTitle: "Msemmen",
+    icon: <FaGlassWhiskey />,
+    color: "#4ecdc4"
+  },
+  {
+    title: "Baghrir",
+    description: "Est un plat traditionnel marocain",
+    wikiTitle: "Baghrir",
+    icon: <FaGlassWhiskey />,
+    color: "#4ecdc4"
+  },
+
+  {
+    title: "Chebakia",
+    description: "Est une pâtisserie de forme roulée originaire du Maghreb",
+    wikiTitle: "Chebakia",
+    icon: <FaLeaf />,
+    color: "#ff6b6b"
+  },
+ 
+
 ];
 
 const Cuisine = () => {
@@ -160,9 +201,11 @@ const Cuisine = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               style={{
-                backgroundImage: cardImages[item.title]
-                  ? `url(${cardImages[item.title]})`
-                  : undefined,
+                backgroundImage: item.customImage
+                  ? `url(${item.customImage})`
+                  : cardImages[item.title]
+                    ? `url(${cardImages[item.title]})`
+                    : undefined,
                 backgroundSize: "cover",
                 backgroundPosition: "center"
               }}
